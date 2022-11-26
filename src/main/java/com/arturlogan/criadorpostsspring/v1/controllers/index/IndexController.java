@@ -1,4 +1,4 @@
-package com.arturlogan.criadorpostsspring.v1.controllers;
+package com.arturlogan.criadorpostsspring.v1.controllers.index;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

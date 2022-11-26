@@ -11,7 +11,7 @@ public class DeletePostService {
 
     private PostRepository postRepository;
 
-    void deletar(Long id){
+    public void deletar(Long id){
         Post post = postRepository.findById(id).get();
 
         postRepository.delete(post);
