@@ -16,7 +16,7 @@ public class GetPostController {
 
     private final GetPostService getPostService;
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<GetPostResponse> getPostResponseResponseEntity(@PathVariable Long id){
         GetPostResponse getPostResponse = getPostService.obter(id);
 

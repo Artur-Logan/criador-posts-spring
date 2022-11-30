@@ -15,7 +15,7 @@ public class DeletePostController {
 
     private final DeletePostService deletePostService;
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> responseEntity(@PathVariable Long id){
         deletePostService.deletar(id);
 

@@ -5,6 +5,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @Entity
@@ -16,14 +17,17 @@ public class Post {
     private Long id;
 
     @NotBlank
+    @NotNull
     private String titulo;
 
     @NotBlank
+    @NotNull
     private String autor;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private LocalDate data;
 
+    @NotNull
     @NotBlank
     @Lob
     private String texto;

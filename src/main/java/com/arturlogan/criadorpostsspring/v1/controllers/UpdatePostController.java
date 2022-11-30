@@ -14,7 +14,7 @@ public class UpdatePostController {
 
     private final UpdatePostService updatePostService;
 
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<UpdatePostResponse> updatePostResponseResponseEntity(@PathVariable Long id, @RequestBody UpdatePostRequest updatePostRequest){
         UpdatePostResponse updatePostResponse = updatePostService.updatePostResponse(id, updatePostRequest);
 

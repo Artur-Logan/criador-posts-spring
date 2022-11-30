@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/v1/post")
@@ -18,7 +20,7 @@ public class CreatePostController {
     private final CreatePostService createPostService;
 
     @PostMapping
-    public ResponseEntity<CreatePostResponse> createPostResponseResponseEntity(@RequestBody CreatePostRequest request){
+    public ResponseEntity<CreatePostResponse> createPostResponseResponseEntity(@Valid @RequestBody CreatePostRequest request){
         CreatePostResponse createPostResponse = createPostService.salvar(request);
 
         return ResponseEntity.ok().body(createPostResponse);
